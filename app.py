@@ -4,7 +4,6 @@ from datetime import datetime,timezone
 
 app=Flask(__name__)
 
-dtime=datetime.now()
 @app.get("/")
 def home():
     return jsonify(
