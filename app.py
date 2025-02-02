@@ -1,9 +1,9 @@
 from flask import Flask,jsonify
 from datetime import datetime,timezone
-
+from flask_cors import CORS
 
 app=Flask(__name__)
-
+CORS(app)
 @app.get("/")
 def home():
     return jsonify(
