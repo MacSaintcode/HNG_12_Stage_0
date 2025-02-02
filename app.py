@@ -8,8 +8,8 @@ CORS(app)
 def home():
     return jsonify(
         {"email": "damimakanju@gmail.com",
-         "current_datetime": datetime.now(timezone.utc).isoformat(),
-         "github_url": "https://github.com/MacSaintcode/HNG_12_Stage_0.git"}),200
+         "current_datetime": datetime.utcnow().replace(microsecond=0).isoformat() + 'Z',
+         "github_url": "https://github.com/MacSaintcode/HNG_12_Stage_0"}),200
 
 
 if __name__ == "__main__":
